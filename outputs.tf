@@ -57,3 +57,7 @@ output "config_map_aws_auth" {
 output "kubeconfig" {
   value = "${local.kubeconfig}"
 }
+
+output "kubeconfig-certificate-authority-data" {
+  value = "${aws_eks_cluster.demo.certificate_authority.0.data}"
+}
