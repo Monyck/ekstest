@@ -10,16 +10,16 @@ provider "aws" {
 # generic for any region.
 data "aws_region" "current" {}
 
-##data "aws_availability_zones" "available" {}
+data "aws_availability_zones" "all" {}
 
-variable "aws_availability_zones" {
-  default = [
-    "us-east-1b",
-    "us-east-1c",
-    "us-east-1d"
-  ]
-  type = "list"
-}
+#variable "aws_availability_zones" {
+#  default = [
+#    "us-east-1b",
+#    "us-east-1c",
+#    "us-east-1d"
+#  ]
+#  type = "list"
+#}
 
 # Not required: currently used in conjuction with using
 # icanhazip.com to determine local workstation external IP
