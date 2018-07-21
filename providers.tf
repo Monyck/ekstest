@@ -10,8 +10,11 @@ provider "aws" {
 # generic for any region.
 data "aws_region" "current" {}
 
-data "aws_availability_zones" "all" {}
+###data "aws_availability_zones" "all" {}
 
+variable "zones" {
+  default = ["us-east-1b", "us-east-1c", "us-east-1d"]
+}
 #variable "aws_availability_zones" {
 #  default = [
 #    "us-east-1b",
