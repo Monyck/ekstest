@@ -59,9 +59,9 @@ output "kubeconfig" {
 }
 
 output "endpoint" {
-  value = "${local.aws_eks_cluster.demo.endpoint}"
+  value = "${aws_eks_cluster.demo.endpoint}"
 }
 
 output "demo-node-userdata" {
-  value = "${local.aws_eks_cluster.demo.certificate_authority.0.data}"
+  value = "${aws_eks_cluster.demo.certificate_authority.0.data}"
 }
