@@ -1,7 +1,6 @@
 #!/bin/bash -e
  
 PROJECT="$(basename `pwd`)"
-BUCKET="myorgs-infrastructure-state"
  
 init() {
   if [ -d .terraform ]; then
@@ -24,4 +23,4 @@ done
  
 shift $((OPTIND-1))
  
-init
+init -input=false
